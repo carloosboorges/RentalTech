@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "equipamento_tb")
-public class Equipamento {
+public class EquipamentoModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

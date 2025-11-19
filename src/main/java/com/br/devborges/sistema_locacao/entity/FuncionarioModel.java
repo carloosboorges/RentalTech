@@ -7,25 +7,20 @@ import lombok.NoArgsConstructor;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "cliente_tb")
-public class Cliente {
+@Table(name = "funcionario_tb")
+public class FuncionarioModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "nome", nullable = false)
+    @Column(name = "nome")
     private String nome;
+
+    @Column(name = "matricula", nullable = false, unique = true)
+    private String matricula;
 
     @Column(name = "email", nullable = false, unique = true)
     private String email;
-
-    @Column(name = "telefone")
-    private String telefone;
-
-    @Column(name = "cpf", nullable = false, unique = true)
-    private String cpf;
-
-
 }
