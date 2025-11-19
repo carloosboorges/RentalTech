@@ -9,7 +9,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "locacao_tb")
-public class Locacao {
+public class LocacaoModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,13 +30,13 @@ public class Locacao {
 
     @ManyToOne
     @JoinColumn(name = "cliente_id")
-    private Cliente cliente;
+    private ClienteModel cliente;
 
     @ManyToOne
     @JoinColumn(name = "funcionario_id")
-    private Funcionario funcionario;
+    private FuncionarioModel funcionario;
 
     @ManyToOne
     @JoinColumn(name = "equipamento_id")
-    private Equipamento equipamento;
+    private EquipamentoModel equipamento;
 }
