@@ -29,5 +29,6 @@ public class EquipamentoModel {
     private String valorDiaria;
 
     @Column(name = "status")
+    @Enumerated(EnumType.STRING)
     private StatusEquipamento status;
 }

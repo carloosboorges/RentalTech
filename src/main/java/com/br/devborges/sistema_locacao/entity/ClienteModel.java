@@ -1,12 +1,10 @@
 package com.br.devborges.sistema_locacao.entity;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 @Data
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 @Table(name = "cliente_tb")
 public class ClienteModel {
 
@@ -26,6 +24,5 @@ public class ClienteModel {
 
     @Column(name = "cpf", nullable = false, unique = true)
     private String cpf;
-
 
 }
